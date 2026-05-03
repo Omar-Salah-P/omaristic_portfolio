@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Omaristic — Visual Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="menu-close" id="menuClose">✕</button>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#work" onclick="closeMenu()">Work</a>
+  <a href="#process" onclick="closeMenu()">Process</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo"><span><img src="Assets/images/OMAR_LOGO.png" alt="Description of image"></span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Clients</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me</a>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-orb"></div>
+  <div class="hero-ring"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">Available for Projects</div>
+    <h1 class="hero-title">
+      Creative Visual<br>
+      <em>Designer.</em>
+    </h1>
+    <p class="hero-desc">
+      Crafting bold brand identities, editorial layouts, and digital experiences that leave a lasting mark. Every pixel with purpose.
+    </p>
+    <div class="hero-actions">
+      <a href="#work" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-ghost">Start a Project <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="hero-img-placeholder">
+        <!-- <svg class="pen-icon" viewBox="0 0 100 120" fill="none">
+          <path d="M50 5 L70 35 L65 35 L65 80 L35 80 L35 35 L30 35 Z" fill="#F0B870" stroke="#000" stroke-width="2"/>
+          <circle cx="50" cy="52" r="6" fill="none" stroke="#000" stroke-width="2"/>
+          <line x1="50" y1="5" x2="50" y2="52" stroke="#000" stroke-width="1.5"/>
+          <rect x="35" y="82" width="30" height="8" rx="1" fill="#F0B870" stroke="#000" stroke-width="2"/>
+          <rect x="38" y="92" width="24" height="6" rx="1" fill="#F0B870" stroke="#000" stroke-width="2"/>
+          <rect x="40" y="100" width="20" height="8" rx="1" fill="#F0B870" stroke="#000" stroke-width="2"/>
+        </svg> -->
+        <img src="Assets/images/heroImage.png" alt="">
+      </div>
+      <div class="hero-card-inner"></div>
+    </div>
+    <div class="floating-card top">
+      <div class="fc-label">Projects Done</div>
+      <div class="fc-value">120+</div>
+    </div>
+    <div class="floating-card bottom">
+      <div class="fc-label">Satisfaction Rate</div>
+      <div class="fc-value">98%</div>
+      <div class="fc-sub">★★★★★</div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <span class="marquee-item">Brand Identity <span class="dot"></span></span>
+    <span class="marquee-item">Editorial Design <span class="dot"></span></span>
+    <span class="marquee-item">UI / UX Design <span class="dot"></span></span>
+    <span class="marquee-item">Motion Graphics <span class="dot"></span></span>
+    <span class="marquee-item">Print & Packaging <span class="dot"></span></span>
+    <span class="marquee-item">Logo Design <span class="dot"></span></span>
+    <span class="marquee-item">Typography <span class="dot"></span></span>
+    <span class="marquee-item">Visual Strategy <span class="dot"></span></span>
+    <!-- duplicated for seamless loop -->
+    <span class="marquee-item">Brand Identity <span class="dot"></span></span>
+    <span class="marquee-item">Editorial Design <span class="dot"></span></span>
+    <span class="marquee-item">UI / UX Design <span class="dot"></span></span>
+    <span class="marquee-item">Motion Graphics <span class="dot"></span></span>
+    <span class="marquee-item">Print & Packaging <span class="dot"></span></span>
+    <span class="marquee-item">Logo Design <span class="dot"></span></span>
+    <span class="marquee-item">Typography <span class="dot"></span></span>
+    <span class="marquee-item">Visual Strategy <span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-img">
+        <!-- <svg width="100" height="120" viewBox="0 0 100 120" fill="none" style="opacity:0.15">
+          <path d="M50 5 L70 35 L65 35 L65 80 L35 80 L35 35 L30 35 Z" fill="#F0B870"/>
+          <rect x="35" y="82" width="30" height="8" fill="#F0B870"/>
+          <rect x="38" y="92" width="24" height="6" fill="#F0B870"/>
+          <rect x="40" y="100" width="20" height="8" fill="#F0B870"/>
+        </svg> -->
+        <img src="Assets/images/Aboutimage.png" alt="">
+
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-num">8+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">50+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-accent"></div>
+    </div>
+
+    <div class="about-text reveal" style="transition-delay: 0.2s">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Designing with<br><em>intention & soul</em></h2>
+      <p>I'm a graphic designer passionate about building visual identities that <strong>resonate and endure</strong>. My work bridges the gap between concept and execution — from strategy to final pixel.</p>
+      <p>With a background rooted in editorial design and brand systems, I've partnered with startups, agencies, and established brands to shape how they look, feel, and communicate with the world.</p>
+      <p>I believe great design is never accidental. It's <strong>deliberate, bold, and deeply human</strong>.</p>
+
+      <div class="skills-list">
+        <span class="skill-tag">Brand Identity</span>
+        <span class="skill-tag">Logo Design</span>
+        <span class="skill-tag">Typography</span>
+        <span class="skill-tag">Editorial</span>
+        <span class="skill-tag">Packaging</span>
+        <span class="skill-tag">UI Design</span>
+        <span class="skill-tag">Illustration</span>
+        <span class="skill-tag">Motion</span>
+        <span class="skill-tag">Art Direction</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="work-header reveal">
+    <div>
+      <div class="section-label">Selected Work</div>
+      <h2 class="section-title">Recent <em>Projects</em></h2>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active">All</button>
+      <button class="filter-tab">Branding</button>
+      <button class="filter-tab">Editorial</button>
+      <button class="filter-tab">Digital</button>
+    </div>
+  </div>
+
+  <div class="work-grid">
+    <div class="project-card reveal">
+      <div class="project-thumb pc1">
+        <!-- <svg width="80" height="96" viewBox="0 0 80 96" fill="none" style="opacity:0.25">
+          <path d="M40 4 L56 28 L52 28 L52 64 L28 64 L28 28 L24 28 Z" fill="#F0B870"/>
+          <rect x="28" y="66" width="24" height="6" fill="#F0B870"/>
+          <rect x="30" y="74" width="20" height="5" fill="#F0B870"/>
+          <rect x="32" y="80" width="16" height="7" fill="#F0B870"/>
+        </svg> -->
+        <img src="Assets/images/Maqaam_logo.png" alt="">
+      </div>
+      <div class="project-overlay">
+        <div class="project-cat">Brand Identity</div>
+        <div class="project-title">Omaristics — Brand System</div>
+        <a href="#" class="project-link">View Case Study →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="transition-delay:0.1s">
+      <div class="project-thumb pc2">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" style="opacity:0.2">
+          <circle cx="30" cy="30" r="26" stroke="#F0B870" stroke-width="2"/>
+          <circle cx="30" cy="30" r="8" fill="#F0B870"/>
+        </svg>
+      </div>
+      <div class="project-overlay">
+        <div class="project-cat">Logo Design</div>
+        <div class="project-title">Aura — Luxury Brand</div>
+        <a href="#" class="project-link">View Case Study →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="transition-delay:0.15s">
+      <div class="project-thumb pc3">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" style="opacity:0.2">
+          <rect x="10" y="10" width="40" height="40" stroke="#1C0055" stroke-width="2"/>
+          <rect x="20" y="20" width="20" height="20" fill="#1C0055"/>
+        </svg>
+      </div>
+      <div class="project-overlay">
+        <div class="project-cat">Editorial</div>
+        <div class="project-title">Meridian — Magazine Layout</div>
+        <a href="#" class="project-link">View Case Study →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="transition-delay:0.2s">
+      <div class="project-thumb pc4">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" style="opacity:0.2">
+          <polygon points="25,5 45,40 5,40" stroke="#F0B870" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <div class="project-overlay">
+        <div class="project-cat">Packaging</div>
+        <div class="project-title">Noir — Skincare Line</div>
+        <a href="#" class="project-link">View →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="transition-delay:0.25s">
+      <div class="project-thumb pc5">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" style="opacity:0.2">
+          <line x1="5" y1="25" x2="45" y2="25" stroke="#F0B870" stroke-width="2"/>
+          <line x1="25" y1="5" x2="25" y2="45" stroke="#F0B870" stroke-width="2"/>
+          <circle cx="25" cy="25" r="10" stroke="#F0B870" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="project-overlay">
+        <div class="project-cat">UI Design</div>
+        <div class="project-title">Vertex — SaaS Dashboard</div>
+        <a href="#" class="project-link">View →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" style="transition-delay:0.3s">
+      <div class="project-thumb pc6">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" style="opacity:0.2">
+          <rect x="5" y="20" width="10" height="25" fill="#1C0055"/>
+          <rect x="20" y="10" width="10" height="35" fill="#1C0055"/>
+          <rect x="35" y="15" width="10" height="30" fill="#1C0055"/>
+        </svg>
+      </div>
+      <div class="project-overlay">
+        <div class="project-cat">Motion</div>
+        <div class="project-title">Pulse — Brand Animation</div>
+        <a href="#" class="project-link">View →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="reveal">
+      <div class="section-label">How I Work</div>
+      <h2 class="section-title">My Creative <em>Process</em></h2>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <div class="step-title">Discovery & Strategy</div>
+          <p class="step-desc">Every project begins with deep listening. I immerse myself in your brand world — understanding your goals, audience, competitors, and the emotional territory you want to own.</p>
+        </div>
+      </div>
+      <div class="process-step reveal" style="transition-delay:0.1s">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <div class="step-title">Concept Development</div>
+          <p class="step-desc">With strategy as a compass, I explore multiple creative directions — sketching, moodboarding, and developing distinct visual languages before settling on the strongest path forward.</p>
+        </div>
+      </div>
+      <div class="process-step reveal" style="transition-delay:0.2s">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <div class="step-title">Design & Refinement</div>
+          <p class="step-desc">I craft every detail with precision — typography, colour, composition, and motion — collaborating closely through feedback cycles until the design feels exactly right.</p>
+        </div>
+      </div>
+      <div class="process-step reveal" style="transition-delay:0.3s">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <div class="step-title">Delivery & Beyond</div>
+          <p class="step-desc">Delivery includes production-ready files, brand guidelines, and ongoing support. Many clients become long-term partners as their visual identity evolves.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center">Client Words</div>
+      <h2 class="section-title">What They <em>Say</em></h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal" style="transition-delay:0.1s">
+        <span class="quote-mark">"</span>
+        <p class="testimonial-text">Working with Odesign was transformative. They didn't just create a logo — they built a complete visual world for our brand that we're incredibly proud of.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <div class="author-name">Amara Osei</div>
+            <div class="author-title">CEO, Aura Collective</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal" style="transition-delay:0.2s">
+        <span class="quote-mark">"</span>
+        <p class="testimonial-text">The attention to detail and strategic thinking sets Odesign apart. Our rebrand exceeded every expectation and doubled our client enquiries within months.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div>
+            <div class="author-name">Marcus Veil</div>
+            <div class="author-title">Founder, Meridian Studio</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal" style="transition-delay:0.3s">
+        <span class="quote-mark">"</span>
+        <p class="testimonial-text">Seamless process from start to finish. Odesign understood our brief immediately and delivered a packaging system that's both beautiful and commercially powerful.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div>
+            <div class="author-name">Sofia Brennan</div>
+            <div class="author-title">Head of Marketing, Noir</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center">Get In Touch</div>
+      <h2 class="section-title">Let's Create <em>Together</em></h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p>Ready to build something extraordinary? Whether you have a clear brief or just an idea — let's talk. I take on a limited number of projects each quarter to ensure every client gets my full attention.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-value">comarx2x@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-detail-label">Location</div>
+            <div class="contact-detail-value">Available Worldwide · Remote-First</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">⏱</div>
+          <div>
+            <div class="contact-detail-label">Response Time</div>
+            <div class="contact-detail-value">Within 24 hours</div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.behance.net/sayidcosalahys" class="social-link">Be</a>
+          <a href="https://x.com/omaristic1" class="social-link">X</a>
+          <a href="https://www.linkedin.com/in/omaristic-graphic-designer-b19293367?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_apps" class="social-link">in</a>
+          <a href="https://www.facebook.com/share/1HingykkUJ/?mibextid=wwXIfr" class="social-link">F</a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal" style="transition-delay:0.2s">
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" placeholder="Jane Smith"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="jane@company.com"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Project Type</label>
+          <input type="text" class="form-input" placeholder="Brand Identity, Logo, Editorial..."/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tell Me About Your Project</label>
+          <textarea class="form-input" placeholder="Share your vision, budget, timeline..."></textarea>
+        </div>
+        <button class="form-submit">Send Message → </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Omaristic</div>
+  <div class="footer-copy">© 2026 Omaristic. All rights reserved.</div>
+  <a href="#home" class="footer-back">↑ Back to Top</a>
+</footer>
+
+<script src="index.js">
+  
+</script>
+</body>
+</html>
