@@ -72,6 +72,20 @@
   function closeMenu() {
     mobileMenu.classList.remove('open');
   }
+  // close when clicking any link inside menu
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
+// close when clicking outside menu content
+mobileMenu.addEventListener('click', (e) => {
+  if (e.target === mobileMenu) closeMenu();
+});
+
+// close with ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMenu();
+});
 
   // Form submit
   document.querySelector('.form-submit').addEventListener('click', function() {
