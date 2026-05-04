@@ -835,6 +835,10 @@
     font-size: 0.95rem;
     color: var(--text);
   }
+  .contact-detail-value a {
+    color: var(--text);
+    text-decoration: none;
+  }
 
   .social-links {
     display: flex; gap: 0.8rem;
