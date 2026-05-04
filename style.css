@@ -442,7 +442,7 @@
     display: flex; align-items: center; justify-content: center;
   }
   .about-img img{
-    height: 44rem;
+    height: 30rem;
   }
   .about-img::after {
     content: '';
