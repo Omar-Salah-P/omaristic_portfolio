@@ -82,11 +82,6 @@ mobileMenu.addEventListener('click', (e) => {
   if (e.target === mobileMenu) closeMenu();
 });
 
-// close with ESC key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeMenu();
-});
-
   // Form submit
   document.querySelector('.form-submit').addEventListener('click', function() {
     this.textContent = 'Message Sent ✓';
