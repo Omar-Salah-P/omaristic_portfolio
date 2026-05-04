@@ -585,7 +585,18 @@
   display: block;
   background-color: transparent;
   }
-
+  .pc4 img{
+    width: 100%;
+  }
+  .pc5 img{
+    width: 100%;
+  }
+  .pc6 img{
+    width: 100%;
+  }
+  
+ 
+ 
   .project-card:nth-child(1) .project-thumb { aspect-ratio: 3/4; }
 
   .project-card:hover .project-thumb { transform: scale(1.04); }
